@@ -432,7 +432,7 @@ header .grid_10 a:hover {
 header .grid_10 .left-text {
   position: absolute;
   top: 204px;
-  left: -242px;
+  left: -235px;
   transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
@@ -444,7 +444,7 @@ header .grid_10 .left-text h4 {
 header .grid_10 .right-text {
   position: absolute;
   top: 193px;
-  right: -242px;
+  right: -250px;
   padding-bottom: 22px;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
