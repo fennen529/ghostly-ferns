@@ -122,42 +122,41 @@ $(window).on( 'load resize', function(){
 
 $(document).ready(function() {
 	var listItems = {
-	'http://ghostlyfern.com/contact/blog': [
-	{ text: "— Contact", href: "http://ghostlyfern.com/contact" },
-	{ text: "Home —", href: "http://ghostlyfern.com/" }
-	],
-	'http://ghostlyfern.com/': [
-	{ text: "— Blog", href: "http://ghostlyfern.com/contact/blog" },
-	{ text: "Contact —", href: "http://ghostlyfern.com/contact" }
-	],
-	'http://ghostlyfern.com/index.php': [
-	{ text: "— Blog", href: "http://ghostlyfern.com/contact/blog" },
-	{ text: "Contact —", href: "http://ghostlyfern.com/contact" }
-	],
-	'http://ghostlyfern.com/contact': [
-	{ text: "— Home", href: "http://ghostlyfern.com/" },
-	{ text: "Blog —", href: "http://ghostlyfern.com/contact/blog" }
-	]
-}
+		'http://ghostlyferns.com/blog': [
+		{ text: "— Contact", href: "http://ghostlyferns.com/contact" },
+		{ text: "Home —", href: "http://ghostlyferns.com/" }
+		],
+		'http://ghostlyferns.com/': [
+		{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
+		{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
+		],
+		'http://ghostlyferns.com/index.php': [
+		{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
+		{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
+		],
+		'http://ghostlyferns.com/contact': [
+		{ text: "— Home", href: "http://ghostlyferns.com/" },
+		{ text: "Blog —", href: "http://ghostlyferns.com/blog" }
+		]
+	}
+	, currentHref = window.location.href;
 
-var currentHref = window.location.href;
+	newLinks(listItems[currentHref]);
 
-newLinks(listItems[currentHref]);
+	$(document).on('click', 'nav .container div a', function(e) {
+		e.preventDefault();
 
-$(document).on('click', 'nav .container div a', function(e) {
-	e.preventDefault();
+		var $this = $(this)
+		, newHref = $this.attr('href');
 
-	var $this = $(this)
-	, newHref = $this.attr('href');
-
-	switch ($this.index()) {
+		switch ($this.index()) {
 			case 0:
 			loadPage(newHref, 'left');
 			break;
 			case 1:
 			loadPage(newHref, 'right');
 			break;
-			}
+		}
 
 		newLinks(listItems[newHref]);
 	});
