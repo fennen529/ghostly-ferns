@@ -122,25 +122,25 @@ $(window).on( 'load resize', function(){
 
 $(document).ready(function() {
 	var listItems = {
-	'blog': [
-	{ text: "— Contact", href: "contact" },
-	{ text: "Home —", href: "index.php" }
+	'http://ghostlyfern.com/contact/blog': [
+	{ text: "— Contact", href: "http://ghostlyfern.com/contact" },
+	{ text: "Home —", href: "http://ghostlyfern.com/" }
 	],
-	'': [
-	{ text: "— Blog", href: "blog" },
-	{ text: "Contact —", href: "contact" }
+	'http://ghostlyfern.com/': [
+	{ text: "— Blog", href: "http://ghostlyfern.com/contact/blog" },
+	{ text: "Contact —", href: "http://ghostlyfern.com/contact" }
 	],
-	'index.php': [
-	{ text: "— Blog", href: "blog" },
-	{ text: "Contact —", href: "contact" }
+	'http://ghostlyfern.com/index.php': [
+	{ text: "— Blog", href: "http://ghostlyfern.com/contact/blog" },
+	{ text: "Contact —", href: "http://ghostlyfern.com/contact" }
 	],
-	'contact': [
-	{ text: "— Home", href: "index.php" },
-	{ text: "Blog —", href: "blog" }
+	'http://ghostlyfern.com/contact': [
+	{ text: "— Home", href: "http://ghostlyfern.com/" },
+	{ text: "Blog —", href: "http://ghostlyfern.com/contact/blog" }
 	]
 }
-, currentHrefArray = window.location.pathname.split('/')
-, currentHref = currentHrefArray[currentHrefArray.length - 1];
+
+var currentHref = window.location.href;
 
 newLinks(listItems[currentHref]);
 
@@ -179,10 +179,10 @@ var loadPage = function(newUrl, direction) {
 	$('.content-wrapper').before($('<div>', { class: 'content-next' }));
 	$('.content-next').load(newUrl + ' .content-wrapper > *', function() {
 	if (newUrl == "index.php") {
-	loadFirstProject();
-}
+		loadFirstProject();
+	}
 
-$(document).trigger('page:changed');
+	$(document).trigger('page:changed');
 
 	var width = $('.content-next').outerWidth();
 
