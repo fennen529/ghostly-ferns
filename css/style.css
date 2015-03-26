@@ -2666,7 +2666,8 @@ footer .rose img {
     background-size: 260px;
   }
   footer .grid_12 h5 {
-    padding: 0 45px;
+    margin-top: 10px;
+    padding: 0 55px;
   }
 
   .contact:before {
