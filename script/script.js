@@ -122,21 +122,21 @@ $(window).on( 'load resize', function(){
 
 $(document).ready(function() {
 	var listItems = {
-		'http://ghostlyferns.com/blog': [
+		'http://blog.ghostlyferns.com/': [
 			{ text: "— Contact", href: "http://ghostlyferns.com/contact" },
 			{ text: "Home —", href: "http://ghostlyferns.com/" }
 		],
 		'http://ghostlyferns.com/': [
-			{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
+			{ text: "— Blog", href: "http://blog.ghostlyferns.com/" },
 			{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
 		],
 			'http://ghostlyferns.com/index.php': [
-			{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
+			{ text: "— Blog", href: "http://blog.ghostlyferns.com/" },
 			{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
 		],
 		'http://ghostlyferns.com/contact': [
 			{ text: "— Home", href: "http://ghostlyferns.com/" },
-			{ text: "Blog —", href: "http://ghostlyferns.com/blog" }
+			{ text: "Blog —", href: "http://blog.ghostlyferns.com/" }
 		]
 	}
 	, currentHref = window.location.href;
