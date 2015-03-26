@@ -123,20 +123,20 @@ $(window).on( 'load resize', function(){
 $(document).ready(function() {
 	var listItems = {
 		'http://ghostlyferns.com/blog': [
-		{ text: "— Contact", href: "http://ghostlyferns.com/contact" },
-		{ text: "Home —", href: "http://ghostlyferns.com/" }
+			{ text: "— Contact", href: "http://ghostlyferns.com/contact" },
+			{ text: "Home —", href: "http://ghostlyferns.com/" }
 		],
 		'http://ghostlyferns.com/': [
-		{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
-		{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
+			{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
+			{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
 		],
-		'http://ghostlyferns.com/index.php': [
-		{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
-		{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
+			'http://ghostlyferns.com/index.php': [
+			{ text: "— Blog", href: "http://ghostlyferns.com/blog" },
+			{ text: "Contact —", href: "http://ghostlyferns.com/contact" }
 		],
 		'http://ghostlyferns.com/contact': [
-		{ text: "— Home", href: "http://ghostlyferns.com/" },
-		{ text: "Blog —", href: "http://ghostlyferns.com/blog" }
+			{ text: "— Home", href: "http://ghostlyferns.com/" },
+			{ text: "Blog —", href: "http://ghostlyferns.com/blog" }
 		]
 	}
 	, currentHref = window.location.href;
@@ -163,12 +163,12 @@ $(document).ready(function() {
 });
 
 var newLinks = function(links) {
-var $navList = $('nav .container div');
+	var $navList = $('nav .container div');
 
-$navList.empty();
+	$navList.empty();
 
-$.each(links, function(index, link) {
-		$navList.append(
+	$.each(links, function(index, link) {
+			$navList.append(
 			$('<a>').attr('href', link['href']).text(link['text'])
 		);
 	});

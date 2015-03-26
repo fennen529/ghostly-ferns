@@ -1283,7 +1283,7 @@ header.blog:after {
   content: '';
   width: 100%;
   height: 664px;
-  background: url("../Patterns/SVG/Big/Outline.svg") repeat center;
+  background: url("Patterns/SVG/Big/Outline.svg") repeat center;
   background-size: auto;
   position: absolute;
   top: 0;
@@ -1323,14 +1323,18 @@ header.blog .flo-head h1 {
   display: inline-block;
   padding: 65px 0;
 }
-header.blog .flo-head a {
+header.blog .flo-head h1 a {
+  font: inherit;
+  color: inherit;
+}
+header.blog .flo-head .spiner {
   position: absolute;
   top: 50%;
   margin-top: -70px;
   left: -70px;
   width: 140px;
   height: 140px;
-  background: url("../Logos/Primary/PrimaryLogo-no-g.svg") no-repeat left top;
+  background: url("Logos/Primary/PrimaryLogo-no-g.svg") no-repeat left top;
   background-size: 100%;
   text-indent: -999px;
   overflow: hidden;
@@ -1340,7 +1344,7 @@ header.blog .flo-head a {
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-header.blog .flo-head a:after {
+header.blog .flo-head .spiner:after {
   content: '';
   height: 20px;
   width: 20px;
@@ -1357,7 +1361,7 @@ header.blog .flo-head .flo {
   top: auto;
   bottom: -22px;
   right: 80px;
-  background: url("../Illustrations/Flo/Flo.svg") no-repeat left top;
+  background: url("Illustrations/Flo/Flo.svg") no-repeat left top;
   background-size: 100%;
 }
 header.blog .flo-head .flo:before {
@@ -1365,7 +1369,7 @@ header.blog .flo-head .flo:before {
   height: 120px;
   width: 120px;
   border-radius: 100%;
-  background: #383838 url("../Patterns/SVG/Big/White.svg") repeat center;
+  background: #383838 url("Patterns/SVG/Big/White.svg") repeat center;
   background-size: 280px;
   position: absolute;
   top: -260px;
@@ -1389,7 +1393,7 @@ header.blog .flo-head #dimond {
   transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  background: #383838 url("../Patterns/SVG/Big/White.svg") repeat center;
+  background: #383838 url("Patterns/SVG/Big/White.svg") repeat center;
   background-size: 280px;
   position: absolute;
   bottom: -60px;
@@ -1417,6 +1421,10 @@ header.blog .flo-head #dimond:after {
   margin-left: 5.982906%;
   width: 53.8461538%;
 }
+.blog-header a {
+  font: inherit;
+  color: inherit;
+}
 
 article:nth-child(3n+2) .blog-header {
   background-color: #3ad6ae;
@@ -1437,17 +1445,36 @@ article:nth-child(3n+3) .blog-header {
   text-transform: uppercase;
   color: #383838;
 }
+.date span a {
+  font: inherit;
+  color: inherit;
+}
 .date h3 {
   margin-top: 2px;
 }
+.date h3 a {
+  font-family: HalisR-Black, Helvetica, sans-serif;
+  display: inline-block;
+  color: #f76b6b;
+}
 
 .grid_8.blog-images {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-left: 14.5299145%;
   width: 70.9401709%;
 }
 .grid_8.blog-images img {
   width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.grid_8.blog-images p {
+  padding: 0 30px;
+  margin-top: 30px;
+}
+
+pre {
+  margin: 0;
 }
 
 .grid_8.blog-copy {
@@ -1475,6 +1502,13 @@ article:nth-child(3n+3) .blog-header {
 .grid_blogRight img {
   width: 100%;
   max-width: 410px;
+}
+
+#old-posts a {
+  font-size: 1.75em;
+}
+#old-posts a + a {
+  float: right;
 }
 
 /* ========================================================================== 
